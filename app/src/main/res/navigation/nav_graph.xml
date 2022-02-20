@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.projects.activities.fragments.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_listModulesFragment"
+            app:destination="@id/listModulesFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_listModulesFragment2"
+            app:destination="@id/listModulesFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_listLessonsFragment"
+            app:destination="@id/listLessonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.projects.activities.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_editCourseFragment"
+            app:destination="@id/editCourseFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_addModuleFragment"
+            app:destination="@id/addModuleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCourseFragment"
+        android:name="com.projects.activities.fragments.EditCourseFragment"
+        android:label="fragment_edit_course"
+        tools:layout="@layout/fragment_edit_course" />
+    <fragment
+        android:id="@+id/listModulesFragment"
+        android:name="com.projects.activities.fragments.ListModulesFragment"
+        android:label="fragment_list_modules"
+        tools:layout="@layout/fragment_list_modules" >
+        <action
+            android:id="@+id/action_listModulesFragment_to_listLessonsFragment"
+            app:destination="@id/listLessonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listLessonsFragment"
+        android:name="com.projects.activities.fragments.ListLessonsFragment"
+        android:label="fragment_list_lessons"
+        tools:layout="@layout/fragment_list_lessons" >
+        <action
+            android:id="@+id/action_listLessonsFragment_to_lessonFragment"
+            app:destination="@id/lessonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addModuleFragment"
+        android:name="com.projects.activities.fragments.AddModuleFragment"
+        android:label="fragment_add_module"
+        tools:layout="@layout/fragment_add_module" >
+        <action
+            android:id="@+id/action_addModuleFragment_to_editModuleFragment"
+            app:destination="@id/editModuleFragment" />
+        <action
+            android:id="@+id/action_addModuleFragment_to_addLessonFragment"
+            app:destination="@id/addLessonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editModuleFragment"
+        android:name="com.projects.activities.fragments.EditModuleFragment"
+        android:label="fragment_edit_module"
+        tools:layout="@layout/fragment_edit_module" />
+    <fragment
+        android:id="@+id/addLessonFragment"
+        android:name="com.projects.activities.fragments.AddLessonFragment"
+        android:label="fragment_add_lesson"
+        tools:layout="@layout/fragment_add_lesson" >
+        <action
+            android:id="@+id/action_addLessonFragment_to_editLessonFragment"
+            app:destination="@id/editLessonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editLessonFragment"
+        android:name="com.projects.activities.fragments.EditLessonFragment"
+        android:label="fragment_edit_lesson"
+        tools:layout="@layout/fragment_edit_lesson" />
+    <fragment
+        android:id="@+id/lessonFragment"
+        android:name="com.projects.activities.fragments.LessonFragment"
+        android:label="fragment_lesson"
+        tools:layout="@layout/fragment_lesson" />
+</navigation>
